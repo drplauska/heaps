@@ -1,10 +1,10 @@
-import { permutationItem } from "./types";
+import { PermutationItem } from "./types";
 
-export const getPermutations = (arr: permutationItem[]) => {
-  const output: permutationItem[][] = [];
+const getPermutations = (arr: PermutationItem[]) => {
+  const output: PermutationItem[][] = [];
 
   const swapInPlace = (
-    arrToSwap: permutationItem[],
+    arrToSwap: PermutationItem[],
     indexA: number,
     indexB: number
   ) => {
@@ -13,7 +13,7 @@ export const getPermutations = (arr: permutationItem[]) => {
     arrToSwap[indexB] = temp;
   };
 
-  const generate = (arrayLength: number, heapArr: permutationItem[]) => {
+  const generate = (arrayLength: number, heapArr: PermutationItem[]) => {
     if (arrayLength === 1) {
       output.push(heapArr.slice());
       return;
@@ -36,3 +36,5 @@ export const getPermutations = (arr: permutationItem[]) => {
 
   return output;
 };
+
+export default getPermutations;

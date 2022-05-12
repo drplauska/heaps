@@ -1,3 +1,1 @@
-import { getPermutations } from "./getPermutations";
-
-export { getPermutations };
+export default "./getPermutations";

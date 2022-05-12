@@ -1,4 +1,4 @@
-import { factorialize } from "./factorialize";
+import factorialize from "./factorialize";
 
 describe("factorialize", () => {
   it("works correctly with positive numbers", () => {

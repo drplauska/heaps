@@ -1,5 +1,5 @@
-import { getPermutations } from "./getPermutations";
-import { factorialize } from "./factorialize";
+import getPermutations from "./getPermutations";
+import factorialize from "./factorialize";
 
 describe("getPermutations", () => {
   const firstArray = [1, 2, 3];
