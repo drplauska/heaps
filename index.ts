@@ -1,28 +1,34 @@
-const getPermutations = (arr) => {
-  const output = [];
+import { permutationItem } from "./types";
 
-  const swapInPlace = (arrToSwap, indexA, indexB) => {
+const getPermutations = (arr: permutationItem[]) => {
+  const output: permutationItem[][] = [];
+
+  const swapInPlace = (
+    arrToSwap: permutationItem[],
+    indexA: number,
+    indexB: number
+  ) => {
     const temp = arrToSwap[indexA];
     arrToSwap[indexA] = arrToSwap[indexB];
     arrToSwap[indexB] = temp;
   };
 
-  const generate = (n, heapArr) => {
-    if (n === 1) {
+  const generate = (arrayLength: number, heapArr: permutationItem[]) => {
+    if (arrayLength === 1) {
       output.push(heapArr.slice());
       return;
     }
 
-    generate(n - 1, heapArr);
+    generate(arrayLength - 1, heapArr);
 
-    for (let i = 0; i < n - 1; i++) {
-      if (n % 2 === 0) {
-        swapInPlace(heapArr, i, n - 1);
+    for (let i = 0; i < arrayLength - 1; i++) {
+      if (arrayLength % 2 === 0) {
+        swapInPlace(heapArr, i, arrayLength - 1);
       } else {
-        swapInPlace(heapArr, 0, n - 1);
+        swapInPlace(heapArr, 0, arrayLength - 1);
       }
 
-      generate(n - 1, heapArr);
+      generate(arrayLength - 1, heapArr);
     }
   };
 
