@@ -1,6 +1,6 @@
 import { permutationItem } from "./types";
 
-const getPermutations = (arr: permutationItem[]) => {
+export const getPermutations = (arr: permutationItem[]) => {
   const output: permutationItem[][] = [];
 
   const swapInPlace = (
