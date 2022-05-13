@@ -1,1 +1,1 @@
-export type PermutationItem = number;
+export type PermutationItem = any;
