@@ -1,1 +1,1 @@
-export default "./getPermutations";
+export default "./src/getPermutations";
